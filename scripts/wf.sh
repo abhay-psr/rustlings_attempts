@@ -15,7 +15,7 @@ function show_diff {
     echo "Filepath: $1"
     filea=$1
     fileb=`echo $1 | sed s/exercises/solutions/`
-    diff --color -y ../rustlings/{$filea,$fileb}
+    diff --color -y -W 240 ../rustlings/{$filea,$fileb}
 }
 
 function copy_file {
